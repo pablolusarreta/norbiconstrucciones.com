@@ -1,0 +1,85 @@
+body {
+
+    font-family: texto, sans-serif;
+    background-color: var(--colorFondo);
+
+    font-weight: 600;
+    color: var(--colorTexto);
+    font-size: 18px;
+    cursor: default;
+
+
+    background-image: url('img/norbi3000.png');
+    background-position: center;
+    /* Centra la imagen horizontal y verticalmente */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se duplique */
+    background-size: 60%;
+    /* Ajusta la imagen para cubrir todo sin deformarse */
+    background-attachment: fixed;
+}
+
+
+/*----------------------------------------------------------*/
+
+#whatsapp {
+    display: block;
+    text-decoration: none;
+    margin: 2% auto;
+    padding: 24px 46px;
+    width: 280px;
+    text-align: center;
+    background-color: var(--color1);
+    color: #fff;
+    transition: background-color .4s;
+}
+
+#whatsapp:hover {
+    background-color: var(--color2);
+}
+
+
+/*----------------------------------------------------------*/
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    height: 200px;
+    color: var(--color1);
+    background-color: #333;
+}
+
+footer>div {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 30%;
+    margin: 20px 1%;
+    font-weight: 600;
+}
+
+footer>div>span {
+    display: block;
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--color1);
+}
+
+footer>div>img {
+    filter: opacity(0.3) drop-shadow(0 0 0 var(--color4));
+}
+
+footer a {
+    color: var(--color1);
+    text-decoration: none;
+    transition: color .7s;
+}
+
+footer a:hover {
+    color: var(--color2);
+}
+
+
+footer a:visited, footer a:active {
+    color: inherit;
+}
