@@ -10,7 +10,7 @@ body {
 
 
     background-image: url('img/norbi1000.png');
-    background-position: center;
+    background-position: center bottom;
     /* Centra la imagen horizontal y verticalmente */
     background-repeat: no-repeat;
     /* Evita que la imagen se duplique */
@@ -38,6 +38,13 @@ body {
     background-color: var(--color2);
 }
 
+div {
+    margin: 1% auto;
+    text-align: center;
+    font-size: 34px;
+    background-color: #fff;
+    opacity: 0.8;
+}
 
 /*----------------------------------------------------------*/
 footer {
