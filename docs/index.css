@@ -10,13 +10,14 @@ body {
 
 
     background-image: url('img/norbi1000.png');
-    background-position: center bottom;
+    background-position: center;
     /* Centra la imagen horizontal y verticalmente */
     background-repeat: no-repeat;
     /* Evita que la imagen se duplique */
-    background-size: 60%;
+    background-size: 700px;
     /* Ajusta la imagen para cubrir todo sin deformarse */
     background-attachment: fixed;
+    font-family: normal;
 }
 
 

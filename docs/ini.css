@@ -1,21 +1,12 @@
 @font-face {
-    font-family: logo;
-    src: url("fuentes/VINERITC.TTF");
+    font-family: normal;
+    src: url("fuentes/EpundaSlab-VariableFont_wght.ttf");
 }
 
-@font-face {
-    font-family: titulo;
-    src: url("fuentes/ubuntu.woff");
-}
-
-@font-face {
-    font-family: texto;
-    src: url("fuentes/segoe.ttf");
-}
 
 :root {
-    --color1: rgb(194, 138, 79);
-    --color2: rgb(200, 119, 33);
+    --color1: #d87200;
+    --color2: #e49d4d;
     --color3: rgb(194, 138, 79);
     --color4: #0fc;
     --colorFondo: #fff;
