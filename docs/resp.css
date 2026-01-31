@@ -1,24 +1,3 @@
-/* Variables de color */
-@font-face {
-    font-family: normal;
-    src: url("fuentes/EpundaSlab-VariableFont_wght.ttf");
-}
-
-:root {
-    --orange: #d68328;
-    --orange2: #af6418;
-    --dark: #000;
-    --dark2: #666;
-    --light-grey: #f4f4f4;
-    --text-color: #444;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -116,22 +95,51 @@ body {
 
 }
 
-/* HERO SECTION */
+/* IMAGENES INICIO SECTION */
+#cuerpo {
+    width: 100vw;
+    overflow: hidden;
+}
+
+#presentacion {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    height:450px;
+    overflow: hidden;
+
+}
+
+#presentacion img {
+    align-content: center;
+}
+
+#presentacion h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-top: 10px;
+    margin-right: 0px;
+}
+
 .hero {
-    
+
     height: 450px;
     display: flex;
     align-items: center;
     color: white;
-    
-    background-position: center;
-    background-image: url("img/H1.jpg");
 
-    
+    background-position: center;
+    /*background-image: url("img/H1.jpg");*/
 }
-.hero .container{
+
+.hero .container {
     width: 100%;
-    
+
 }
 
 .hero-content h1 {
@@ -219,24 +227,19 @@ body {
 
 /*----------------------------------------------------------*/
 footer {
-
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 90px;
+    gap: 20px;
+    padding: 20px 0;
     bottom: 0;
-    margin-top: auto;
     font-size: 1rem;
     color: var(--text-color);
+
     background-color: var(--orange);
 }
 
 footer>span {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    width: 20%;
-    margin: 20px 0;
     font-weight: 600;
 }
 
@@ -245,11 +248,11 @@ footer>span>a>strong {
 }
 
 footer>span>img {
+    vertical-align: bottom;
+    margin: 0 10px;
     width: 24px;
     filter: brightness(500%);
 }
-
-
 
 footer a {
     color: var(--dark);
@@ -274,7 +277,7 @@ footer a:visited, footer a:active {
         gap: 20px;
     }
 
-    .contact-info {
+    .contact-info, footer {
         justify-content: center;
         flex-wrap: wrap;
     }

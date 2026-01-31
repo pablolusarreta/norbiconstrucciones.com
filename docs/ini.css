@@ -3,17 +3,17 @@
     src: url("fuentes/EpundaSlab-VariableFont_wght.ttf");
 }
 
-
 :root {
-    --color1: #d87200;
-    --color2: #e49d4d;
-    --color3: rgb(194, 138, 79);
-    --color4: #0fc;
-    --colorFondo: #fff;
-    --colorText: #333;
+    --orange: #d68328;
+    --orange2: #af6418;
+    --dark: #000;
+    --dark2: #666;
+    --light-grey: #f4f4f4;
+    --text-color: #444;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
