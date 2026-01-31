@@ -3,9 +3,12 @@
     font-family: normal;
     src: url("fuentes/EpundaSlab-VariableFont_wght.ttf");
 }
+
 :root {
     --orange: #d68328;
-    --dark: #222222;
+    --orange2: #af6418;
+    --dark: #000;
+    --dark2: #666;
     --light-grey: #f4f4f4;
     --text-color: #444;
 }
@@ -17,12 +20,17 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: #fff;
     font-family: normal;
     font-size: large;
+
+    z-index: 10;
 }
 
 .container {
@@ -35,8 +43,8 @@ body {
 .top-bar {
     background: #fff;
     padding: 10px 0;
-    font-size: 0.85rem;
-    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .contact-info {
@@ -45,69 +53,101 @@ body {
     gap: 20px;
 }
 
+.contact-info>span {
+    margin-right: 40px;
+
+}
+
+.contact-info>span>img {
+    width: 22px;
+    vertical-align: bottom;
+    margin: 0 10px 0 10px;
+
+}
+
+.contact-info>span>a {
+    transition: color .7s;
+    text-decoration: none;
+    color: var(--text-color);
+
+}
+
+.contact-info>span>a:hover {
+    color: var(--orange);
+}
+
 .main-nav {
-    padding: 20px 0;
+    background-color: #f0f0f6;
 }
 
 .nav-content {
+    max-height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .menu {
+
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 100px;
 }
 
 .menu a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     text-transform: capitalize;
+}
+
+.menu img {
+    width: 28px;
+}
+
+.logo {
+    z-index: 20;
+}
+
+.logo>img {
+    margin-top: 50px;
+    width: 250px;
+
 }
 
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url('https://images.unsplash.com/photo-1628744448839-36636f1947b7?auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
+    
     height: 450px;
     display: flex;
     align-items: center;
     color: white;
+    
+    background-position: center;
+    background-image: url("img/H1.jpg");
+
+    
+}
+.hero .container{
+    width: 100%;
+    
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: 2rem;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-right: 0px;
 }
 
 .line {
-    width: 150px;
+    width: 350px;
     height: 3px;
     background: white;
-    margin-bottom: 20px;
-}
+    margin-top: 300px;
 
-.slider-dots {
-    display: flex;
-    gap: 5px;
-}
-
-.dot {
-    width: 30px;
-    height: 6px;
-    background: rgba(255,255,255,0.4);
-}
-
-.dot.active {
-    background: white;
 }
 
 /* INFO BLOCKS */
@@ -119,17 +159,25 @@ body {
 .block {
     flex: 1;
     min-width: 300px;
-    padding: 50px 8%;
+    padding: 50px 2%;
     color: white;
     font-size: 1.1rem;
 }
 
+
+
 .orange-block {
-    background-color: var(--orange);
+    background: var(--orange);
+    color: #000;
+    text-align: right;
+}
+
+.orange-block>p {
+    text-align: right;
 }
 
 .dark-block {
-    background-color: var(--dark);
+    background: var(--dark2);
 }
 
 /* PRODUCT SECTION */
@@ -169,6 +217,55 @@ body {
     border: 1px solid #ddd;
 }
 
+/*----------------------------------------------------------*/
+footer {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    bottom: 0;
+    margin-top: auto;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--orange);
+}
+
+footer>span {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 20%;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+footer>span>a>strong {
+    margin-right: 10px;
+}
+
+footer>span>img {
+    width: 24px;
+    filter: brightness(500%);
+}
+
+
+
+footer a {
+    color: var(--dark);
+    text-decoration: none;
+    transition: color .7s;
+}
+
+footer a:hover {
+    color: var(--dark2);
+}
+
+
+footer a:visited, footer a:active {
+    color: inherit;
+}
+
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 992px) {
@@ -176,7 +273,7 @@ body {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .contact-info {
         justify-content: center;
         flex-wrap: wrap;
@@ -187,9 +284,10 @@ body {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .product-grid {
-        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-columns: 1fr;
+        /* Una columna en móviles */
     }
 
     .menu {
