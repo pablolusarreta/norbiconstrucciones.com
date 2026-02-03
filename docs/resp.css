@@ -1,4 +1,8 @@
+@import 'ini.css';
+
+
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -7,8 +11,6 @@ body {
     color: var(--text-color);
     background-color: #fff;
     font-family: normal;
-    font-size: large;
-
     z-index: 10;
 }
 
@@ -67,10 +69,11 @@ body {
 }
 
 .menu {
-
     list-style: none;
     display: flex;
-    gap: 100px;
+    gap: 8px;
+    min-width: 800px;
+    justify-content: space-between;
 }
 
 .menu a {
@@ -90,73 +93,54 @@ body {
 }
 
 .logo>img {
-    margin-top: 50px;
+    margin-top: 120px;
     width: 250px;
 
 }
 
 /* IMAGENES INICIO SECTION */
 #cuerpo {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 
 #presentacion {
+    position: relative;
     width: 100%;
-    height: 450px;
+    height: 500px;
     display: flex;
     justify-content: center;
     /* Centra horizontalmente */
     align-items: center;
     /* Centra verticalmente */
-    height:450px;
     overflow: hidden;
-
+    background-color: var(--dark2);
+    background-image: url('img/H1.jpg');
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: cover;
 }
 
-#presentacion img {
+#imgPres {
     align-content: center;
+    transition: opacity 2s;
+    opacity: 0;
 }
 
 #presentacion h1 {
+    position: absolute;
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.1;
-    margin-top: 10px;
-    margin-right: 0px;
-}
-
-.hero {
-
-    height: 450px;
-    display: flex;
-    align-items: center;
-    color: white;
-
-    background-position: center;
-    /*background-image: url("img/H1.jpg");*/
-}
-
-.hero .container {
-    width: 100%;
-
-}
-
-.hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    line-height: 1.1;
-    margin-top: 10px;
-    margin-right: 0px;
-}
-
-.line {
-    width: 350px;
-    height: 3px;
-    background: white;
     margin-top: 300px;
-
+    margin-right: 40%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
 }
+
 
 /* INFO BLOCKS */
 .info-blocks {
@@ -178,14 +162,14 @@ body {
     background: var(--orange);
     color: #000;
     text-align: right;
+    padding: 30px;
 }
 
-.orange-block>p {
-    text-align: right;
-}
+.orange-block>p {}
 
 .dark-block {
     background: var(--dark2);
+    padding: 30px;
 }
 
 /* PRODUCT SECTION */
@@ -219,37 +203,41 @@ body {
 
 .product-item img {
     width: 100%;
-    height: 250px;
+    height: 370px;
     object-fit: cover;
     display: block;
     border: 1px solid #ddd;
 }
 
 /*----------------------------------------------------------*/
+.separador {
+    height: 100px;
+}
+
 footer {
+    position: absolute;
     width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
     padding: 20px 0;
     bottom: 0;
     font-size: 1rem;
     color: var(--text-color);
-
+    gap: 20px;
     background-color: var(--orange);
 }
 
 footer>span {
+
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
-footer>span>a>strong {
-    margin-right: 10px;
-}
 
 footer>span>img {
-    vertical-align: bottom;
-    margin: 0 10px;
     width: 24px;
     filter: brightness(500%);
 }
@@ -267,6 +255,78 @@ footer a:hover {
 
 footer a:visited, footer a:active {
     color: inherit;
+}
+
+
+
+/*--PAGINAS SECCIONES ----------------------------------------------------*/
+
+
+.contenido {
+
+    display: flex;
+    max-width: 1200px;
+    margin: 200px auto;
+    gap: 50px;
+    font-weight: 600;
+
+}
+
+/* Barra Lateral (Menú) */
+.sidebar {
+    width: 200px;
+    padding-top: 180px;
+    flex-shrink: 0;
+}
+
+.menu-item {
+    background-color: #e9ecef;
+    /* Gris claro de la imagen */
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    display: block;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #dee2e6;
+}
+
+/* Contenido Principal */
+.main-content {
+    color:var(--orange);
+    flex-grow: 1;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 900px;
+}
+
+/* Cuadrícula de Imágenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 /* RESPONSIVE DESIGN */

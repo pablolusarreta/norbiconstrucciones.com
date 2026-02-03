@@ -1,61 +1,40 @@
 {
-    "titular": {
-        "titulo": "Iwona Madej",
-        "descripcion": "Masaje Deportivo y Superior, Quiromasaje, Reflexología Podal y Drenaje Linfático Manual.",
-        "eslogan": [
-            "Cuida de tu cuerpo, es el único lugar que tienes para vivir.",
-            "Relaja, libera, renueva ...",
-            "El masaje es una de las artes más sutiles "
-        ],
-        "coletilla": "¡ Deja que te cuide hoy !"
-    },
     "secciones": [
         {
-            "titulo": "Masaje Deportivo y Superior",
-            "texto": "Ayuda a la recuperación de lesiones en cualquier zona del cuerpo y previene de futuras lesiones. ",
-            "precio": "40",
-            "duracion": "1 H"
+            "titulo": "Demolición",
+            "texto": "Nos encargamos de demoliciones completas, tanto interiores como exteriores, así como gestión de escombro. Esto depende de las necesidades de nuestros clientes, pero generalmente no realizamos demoliciones que requieran el uso maquinaria pesada."
         },
         {
-            "titulo": "Quiromasaje",
-            "texto": "Son diferentes técnicas de masaje manual en zonas del cuerpo a tratar, puede generar efectos reguladores sobre dolencias concretas, así como aportar sensación general de energía, potenciar estados de ánimo y disminuir el cansancio. ",
-            "precio": "38",
-            "duracion": "1 H"
+            "titulo": "Albañilería",
+            "texto": "Construimos edificios desde cero, vertemos losas de hormigón para edificios o locales. También construimos diversos tipos de balcones de hormigón, piscinas y muchos otros proyectos de albañilería, grandes y pequeños."
         },
         {
-            "titulo": "Masaje Relajante",
-            "texto": "Consiste en la realización de maniobras superficiales en los que la intensidad de la presión es suave y el ritmo lento y repetitivo, se pierde la sensación de dolor y los músculos se relajan. ",
-            "precio": "35",
-            "duracion": "1 H"
+            "titulo": "Carpintería",
+            "texto": "Creamos diversos tipos de estructuras de madera, muebles, armarios, estanterías, estructuras de madera y suelos a medida. Según las necesidades de nuestros clientes, también podemos realizar muchos otros proyectos relacionados con la madera."
         },
         {
-            "titulo": "Drenaje Limfático Manual",
-            "texto": "Sirve para mejorar el funcionamiento del sistema linfático y busca los puntos con mayor hinchazón y los anula, elimina toxinas mejorando la circulación sanguínea. ",
-            "precio": "50",
-            "duracion": "1 H"
+            "titulo": "Placas Pladur",
+            "texto": "Instalamos paredes de pladur, techos sencillos y a medida, y diversos tipos de estanterías y nichos de pladur. Por supuesto, construimos la estructura de la pared, la aislamos con un aislante especifico, atornillamos las placas y aplicamos el yeso adecuado."
         },
         {
-            "titulo": "Reflexología Podal",
-            "texto": "Reflexología podal es una técnica terapéutica basada en la estimulación de puntos sobre los pies denominados zonas de reflejo. Estas zonas se corresponden con distintas partes del cuerpo.",
-            "precio": "50",
-            "duracion": "1 H"
-        }
-    ],
-    "pie": [
-        {
-            "titulo": "Contacto",
-            "texto": "<a href='mailto:iwona@madej.com.es' target='_blank'>iwona@madej.com.es</a><br><a href='tel:34678194512' target='_blank'>Movil 678 19 45 12</a>",
-            "img": "contacto.png"
+            "titulo": "Fontanería",
+            "texto": "Realizamos todo tipo de conexiones de agua, incluyendo instalación y conexión de baños, aseos, duchas, cocinas, lavaderos y más."
         },
         {
-            "titulo": "Dirección",
-            "texto": "Idiazabal 7 - B - 3º C<br>20130, URNIETA",
-            "img": "direccion.png"
+            "titulo": "Electricidad",
+            "texto": "Conectamos sistemas eléctricos en viviendas y otros espacios. Nos encargamos de todas las instalaciones de cableado eléctrico, incluyendo la conexión completa de cuadros eléctricos."
         },
         {
-            "titulo": "facebook",
-            "texto": "<a href='https://www.facebook.com/' target='_blanc'>www.facebook.com</a>",
-            "img": "facebook.png"
+            "titulo": "Pintura",
+            "texto": "Pintamos tanto interiores como exteriores de edificios (pisos, habitaciones, locales, edificios, etc. De cualquier material). Pintamos todo. Utilizamos pinturas de alta calidad. Preferimos pintar con nuestros propios materiales, lo que nos permite garantizar la calidad y la durabilidad."
+        },
+        {
+            "titulo": "Azulejos",
+            "texto": "Ofrecemos a nuestros clientes servicios de alicatado. Trabajamos con azulejos de todos los tamaños, tanto para suelos como para paredes. También instalamos diversos tipos de baños, incluyendo impermeabilizaciones."
+        },
+        {
+            "titulo": "Trabajos adicionales",
+            "texto": "Nos esforzamos por satisfacer las necesidades de nuestros clientes. Podemos encargarnos de cualquier proyecto de construcción. No dude en contactarnos si tiene alguna pregunta."
         }
     ]
 }
