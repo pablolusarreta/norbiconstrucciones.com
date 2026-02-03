@@ -1,12 +1,12 @@
 @import 'ini.css';
-
+@import 'media.css';
 
 body {
     position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: normal;
     line-height: 1.6;
     color: var(--text-color);
     background-color: #fff;
@@ -165,7 +165,6 @@ body {
     padding: 30px;
 }
 
-.orange-block>p {}
 
 .dark-block {
     background: var(--dark2);
@@ -329,32 +328,3 @@ footer a:visited, footer a:active {
     object-fit: cover;
 }
 
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 992px) {
-    .nav-content {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-info, footer {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
-        /* Una columna en móviles */
-    }
-
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}

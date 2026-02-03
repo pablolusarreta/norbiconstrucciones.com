@@ -7,7 +7,7 @@ const cargaContenido = url => {
         .catch(err => console.log(err));
 }
 // MOVILES
-const movil = () => {
+/*const movil = () => {
     if (navigator.userAgent.match(/Android/i)
         || navigator.userAgent.match(/iPhone/i)        
         || navigator.userAgent.match(/BlackBerry/i)
@@ -21,7 +21,7 @@ const movil = () => {
     }
 }
 
-
+*/
 window.onload = () => {
     // PRESENTACION  
     const imgHome = ["H4.jpg", "H2.jpg", "H3.jpg", "H1.jpg"]
@@ -47,7 +47,7 @@ window.onload = () => {
     }
     //ARRANQUE
     setInterval(presentacion, 10000)
-    movil()
+    //movil()
 
 
 
