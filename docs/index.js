@@ -31,5 +31,5 @@ window.onload = () => {
         foto = (foto == (imgHome.length - 1)) ? 0 : foto + 1
     }
     //ARRANQUE
-    setInterval(presentacion, 10000)
+    //setnterval(presentacion, 10000)
 } 
