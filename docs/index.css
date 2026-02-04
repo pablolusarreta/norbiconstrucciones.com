@@ -1,94 +1,268 @@
+@import 'ini.css';
+@import 'media.css';
+@import 'secciones.css';
 body {
-
-    font-family: texto, sans-serif;
-    background-color: var(--colorFondo);
-
-    font-weight: 600;
-    color: var(--colorTexto);
-    font-size: 18px;
-    cursor: default;
-
-
-    background-image: url('img/norbi1000.png');
-    background-position: center;
-    /* Centra la imagen horizontal y verticalmente */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se duplique */
-    background-size: 700px;
-    /* Ajusta la imagen para cubrir todo sin deformarse */
-    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: normal;
-
-}
-
-
-/*----------------------------------------------------------*/
-
-#whatsapp {
-    display: block;
-    text-decoration: none;
-    margin: 2% auto;
-    padding: 24px 46px;
-    width: 280px;
-    text-align: center;
-    background-color: var(--color1);
-    color: #fff;
-    transition: background-color .4s;
-}
-
-#whatsapp:hover {
-    background-color: var(--color2);
-}
-
-div {
-    margin: 1% auto;
-    text-align: center;
-    font-size: 34px;
+    line-height: 1.6;
+    color: var(--text-color);
     background-color: #fff;
-    opacity: 0.8;
+    font-family: normal;
+    z-index: 10;
 }
 
-/*----------------------------------------------------------*/
-footer {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.top-bar {
+    background: #fff;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.contact-info>span {
+    margin-right: 40px;
+
+}
+
+.contact-info>span>img {
+    width: 22px;
+    vertical-align: bottom;
+    margin: 0 10px 0 10px;
+
+}
+
+.contact-info>span>a {
+    transition: color .7s;
+    text-decoration: none;
+    color: var(--text-color);
+
+}
+
+.contact-info>span>a:hover {
+    color: var(--orange);
+}
+
+.main-nav {
+    background-color: var(--gris-claro);
+}
+
+.nav-content {
+    max-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    min-width: 800px;
+    justify-content: space-between;
+    z-index:25;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.menu img {
+    width: 28px;
+}
+
+.logo {
+    z-index: 20;
+}
+
+.logo>img {
+    margin-top: 120px;
+    width: 250px;
+
+}
+
+/* IMAGENES INICIO SECTION */
+#cuerpo {
+    width: 100%;
+    overflow: hidden;
+}
+
+#presentacion {
+    position: relative;
+    width: 100%;
+    height: 500px;
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    height: 200px;
-    color: var(--color1);
-    background-color: #333;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    overflow: hidden;
+    background-color: var(--dark2);
+    background-image: url('img/H1.jpg');
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: cover;
 }
 
-footer>div {
-    display: inline-block;
-    position: relative;
+#imgPres {
+    align-content: center;
+    transition: opacity 2s;
+    opacity: 0;
+}
+
+#presentacion h1 {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-top: 300px;
+    margin-right: 40%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
+}
+
+
+/*------------------ INFO BLOCKS--------------------------- */
+.info-blocks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    flex: 1;
+    min-width: 300px;
+    padding: 50px 2%;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.orange-block {
+    background: var(--orange);
+    color: #000;
+    text-align: right;
+    padding: 30px;
+}
+
+
+.dark-block {
+    background: var(--dark2);
+    padding: 30px;
+}
+
+/* ----------------------PRODUCT SECTION ------------------------*/
+.products {
+    padding: 60px 20px;
     text-align: center;
-    width: 30%;
-    margin: 20px 1%;
-    font-weight: 600;
 }
 
-footer>div>span {
+.section-title h2 {
+    color: var(--orange);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-title::before {
+    content: "";
     display: block;
-    font-size: 14px;
-    font-weight: 900;
-    color: var(--color1);
+    width: 60px;
+    height: 2px;
+    background: var(--orange);
+    margin: 0 auto 15px;
 }
 
-footer>div>img {
-    filter: opacity(0.3) drop-shadow(0 0 0 var(--color4));
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.product-item img {
+    width: 100%;
+    min-width: 350px;
+    height: 370px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #ddd;
+}
+/*----------------------------------------------------------*/
+.contenido {
+
+    display: flex;
+    max-width: 1200px;
+    margin: 200px auto;
+    gap: 50px;
+    font-weight: 600;
+
+}
+.separador {
+    height: 100px;
+}
+/*------------------          PIE            ---------------*/
+footer {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    bottom: 0;
+    font-size: 1rem;
+    color: var(--text-color);
+    gap: 20px;
+    background-color: var(--orange);
+}
+
+footer>span {
+
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+
+footer>span>img {
+    width: 24px;
+    filter: brightness(500%);
 }
 
 footer a {
-    color: var(--color1);
+    color: var(--dark);
     text-decoration: none;
     transition: color .7s;
 }
 
 footer a:hover {
-    color: var(--color2);
+    color: var(--dark2);
 }
 
 
 footer a:visited, footer a:active {
     color: inherit;
 }
+
+
+

@@ -1,0 +1,61 @@
+
+
+/* Barra Lateral (Menú) */
+.sidebar {
+    width: 200px;
+    padding-top: 180px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.menu-item {
+    background-color: var(--gris-claro);
+    /* Gris claro de la imagen */
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #dee2e6;
+}
+
+/* Contenido Principal */
+.main-content {
+    margin-right: 30px;
+    color:var(--orange);
+    flex-grow: 1;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 900px;
+}
+
+/* Cuadrícula de Imágenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+    gap: 15px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 350px;
+
+    height: auto;
+    display: block;
+    object-fit: cover;
+}

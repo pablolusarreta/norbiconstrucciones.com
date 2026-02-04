@@ -20,7 +20,7 @@
         margin-top: -450px;
         align-items: center;
         flex-direction: column;
-       
+
     }
 
     .logo {
@@ -30,9 +30,16 @@
     .main-nav {
         height: 290px;
     }
-        .orange-block {
-        text-align: left;
+
+    .product-item {
+        min-width: 300px;
     }
+
+    .sidebar {
+        max-width: 120px;
+
+    }
+
 }
 
 @media (max-width: 990px) {
@@ -40,20 +47,20 @@
         display: none;
     }
 
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-
     .menu {
         flex-wrap: wrap;
         justify-content: center;
     }
+
 }
 
-@media (max-width: 800px) {
+@media (max-width: 616px) {
 
-.menu {
+    .menu {
         width: 10%;
     }
-}
 
+    .orange-block p {
+        text-align: left;
+    }
+}

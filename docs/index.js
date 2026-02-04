@@ -6,22 +6,7 @@ const cargaContenido = url => {
         })
         .catch(err => console.log(err));
 }
-// MOVILES
-/*const movil = () => {
-    if (navigator.userAgent.match(/Android/i)
-        || navigator.userAgent.match(/iPhone/i)        
-        || navigator.userAgent.match(/BlackBerry/i)
-        || navigator.userAgent.match(/Windows Phone/i)) {
 
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'movil.css';
-        const head = document.head;
-        head.insertBefore(link, head.firstChild);
-    }
-}
-
-*/
 window.onload = () => {
     // PRESENTACION  
     const imgHome = ["H4.jpg", "H2.jpg", "H3.jpg", "H1.jpg"]
@@ -47,8 +32,4 @@ window.onload = () => {
     }
     //ARRANQUE
     setInterval(presentacion, 10000)
-    //movil()
-
-
-
 } 
