@@ -216,7 +216,6 @@ body {
 
 /*----------------------------------------------------------*/
 
-
 .separador {
     height: 100px;
 }
@@ -227,6 +226,7 @@ footer {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
     gap: 25px;
     padding: 20px;
     bottom: 0;

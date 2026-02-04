@@ -1,13 +1,36 @@
-const cargaContenido = url => {
+const cargaContenido = (url, sec) => {
     fetch(url)
         .then(res => res.text())
         .then(html => {
             document.getElementById('cuerpo').innerHTML = html;
+            if (sec == 0) cargaDatos(0)
+
         })
         .catch(err => console.log(err));
 }
 
+const cargaDatos = sec => {
+    const titulo = document.getElementsByClassName("main-content")[0].children[0]
+    const descripcion = document.getElementsByClassName("main-content")[0].children[1]
+    const imgsEspec = document.getElementsByClassName("image-grid")[0]
+
+    titulo.innerHTML = DATOS.secciones[sec].titulo
+    descripcion.innerHTML = DATOS.secciones[sec].texto
+
+    const nfotos = DATOS.secciones[sec].imgs.length > 6 ? 6 : nfotos;
+
+    let salida = new String()
+    for (let i = 0; i < nfotos; i++) {
+        salida += `<div class="image-container">
+                        <img src="${DATOS.secciones[sec].carpeta}${DATOS.secciones[sec].imgs[i]}">
+                    </div>`
+    }
+    imgsEspec.innerHTML = salida
+}
+// INICIO
+let DATOS
 window.onload = () => {
+    document.getElementById('cuerpo').addEventListener("load", () => { alert(9) })
     // PRESENTACION  
     const imgHome = ["H4.jpg", "H2.jpg", "H3.jpg", "H1.jpg"]
     const imgPresentacion = document.getElementById("presentacion")
@@ -31,5 +54,15 @@ window.onload = () => {
         foto = (foto == (imgHome.length - 1)) ? 0 : foto + 1
     }
     //ARRANQUE
-    //setnterval(presentacion, 10000)
+    setInterval(presentacion, 10000)
+
+    // DATOS JSON
+
+    fetch("data.json")
+        .then(response => response.json())
+        .then(data => {
+            DATOS = data
+            //console.log(DATOS)
+        })
+
 } 
