@@ -1,9 +1,6 @@
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 1220px) {
-    .orange-block {
-        text-align: left;
-    }
 
     .nav-content {
         flex-direction: column;
@@ -11,16 +8,10 @@
 
     }
 
-    .contact-info, footer {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
     .menu {
         margin-top: -450px;
         align-items: center;
         flex-direction: column;
-
     }
 
     .logo {
@@ -34,13 +25,6 @@
     .product-item {
         min-width: 300px;
     }
-
-    .sidebar {
-        max-width: 120px;
-
-    }
-
-
 }
 
 @media (max-width: 990px) {
@@ -53,15 +37,28 @@
         justify-content: center;
     }
 
+    .contenido {
+        align-items: center;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .sidebar {
+        text-align: center;
+        flex-direction: row;
+    }
 }
 
 @media (max-width: 616px) {
-
-    .menu {
-        width: 10%;
-    }
-
     .orange-block p {
         text-align: left;
+    }
+
+    .description {
+        
+    }
+
+    .image-container {
+       padding: 0 20px;
     }
 }
