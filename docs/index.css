@@ -13,6 +13,7 @@ body {
     background-color: #fff;
     font-family: normal;
     z-index: 10;
+    user-select: none;
 }
 
 .container {
