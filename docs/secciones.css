@@ -1,7 +1,7 @@
-/* Barra Lateral (Menú) */
+/* ------------------------------------------- */
 
 
-.contenido {
+.especialidades {
     display: flex;
     max-width: 1200px;
     margin: 200px auto;
@@ -10,13 +10,13 @@
 
 }
 
-.sidebar {
+.especialidades .sidebar {
     width: 200px;
     flex-grow: 1;
     overflow: hidden;
 }
 
-.menu-item {
+.especialidades .menu-item {
     background-color: var(--gris-claro);
     /* Gris claro de la imagen */
     padding: 12px 20px;
@@ -29,13 +29,13 @@
 
 }
 
-.menu-item:hover {
+.especialidades .menu-item:hover {
     background-color: #dee2e6;
 }
 
 /* Contenido Principal */
 
-.main-content {
+.especialidades .main-content {
     width: 100%;
     color: var(--orange);
     padding: 0 20px;
@@ -43,7 +43,7 @@
     background-color: #fff;
 }
 
-.description {
+.especialidades .description {
     font-size: 14px;
     line-height: 1.6;
     color: var(--dark);
@@ -64,7 +64,7 @@
 
 .image-container {
     position: relative;
-    width:100%;
+    width: 100%;
     padding: 0px;
     height: auto;
 }
@@ -72,5 +72,45 @@
 .image-container img {
     width: 100%;
     height: auto;
-    
+
+}
+
+/* ------------------------------------------- */
+
+.trabajos {
+    display: block;
+    max-width: 900px;
+    margin: 200px auto;
+    gap: 50px;
+    font-weight: 600;
+
+}
+
+.trabajos .main-content {
+    margin: 80px 0;
+    width: 100%;
+    color: var(--orange);
+    padding: 0 20px;
+    flex-grow: 1;
+    background-color: #fff;
+}
+
+/* ------------------------------------------- */
+.contacto {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 160px auto;
+    margin-bottom: 40px;
+
+}
+
+.direccion {
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    max-width: 1200px;
+
 }

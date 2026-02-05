@@ -3,31 +3,43 @@ const cargaContenido = (url, sec) => {
         .then(res => res.text())
         .then(html => {
             document.getElementById('cuerpo').innerHTML = html;
-            if (sec == 0) cargaDatos(0)
+            if (sec == 0) especialidades(0)
+            if (sec == 1) trabajos()
 
         })
         .catch(err => console.log(err));
 }
-
-const cargaDatos = sec => {
-    const titulo = document.getElementsByClassName("main-content")[0].children[0]
-    const descripcion = document.getElementsByClassName("main-content")[0].children[1]
-    const imgsEspec = document.getElementsByClassName("image-grid")[0]
-
-    titulo.innerHTML = DATOS.secciones[sec].titulo
-    descripcion.innerHTML = DATOS.secciones[sec].texto
-
-    const nfotos = DATOS.secciones[sec].imgs.length > 6 ? 6 : nfotos;
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+const especialidades = sec => {
+    document.getElementsByClassName("main-content")[0].children[0].innerHTML = DATOS.secciones[sec].titulo
+    document.getElementsByClassName("main-content")[0].children[1].innerHTML = DATOS.secciones[sec].texto
+    const nfotos = DATOS.secciones[sec].imgs.length
+    const cont = nfotos > 6 ? 6 : nfotos
     let salida = new String()
-    for (let i = 0; i < nfotos; i++) {
+    for (let i = 0; i < cont; i++) {
         salida += `<div class="image-container">
                         <img src="${DATOS.secciones[sec].carpeta}${DATOS.secciones[sec].imgs[i]}">
                     </div>`
     }
-    imgsEspec.innerHTML = salida
+    document.getElementsByClassName("image-grid")[0].innerHTML = salida
 }
-// INICIO
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+const trabajos = () => {
+    let salida = new String()
+    for (let i = 0; i < DATOS.secciones.length; i++) {
+        salida += `  <main class="main-content">
+                    <h1>${DATOS.secciones[i].titulo}</h1>
+                    <div class="image-grid">`
+        for (let j = 0; j < DATOS.secciones[i].imgs.length; j++) {
+            salida +=   `<div class="image-container">
+                            <img src="${DATOS.secciones[i].carpeta + DATOS.secciones[i].imgs[j]}">
+                        </div>`
+        }
+        salida += "</div></main>"
+    }
+    document.getElementsByClassName("trabajos")[0].innerHTML = salida
+}
+// INICIO/////////////////////////////////////////////////////////////////////////////////////////////////
 let DATOS
 window.onload = () => {
     document.getElementById('cuerpo').addEventListener("load", () => { alert(9) })
