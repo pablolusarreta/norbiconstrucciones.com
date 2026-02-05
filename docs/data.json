@@ -123,7 +123,7 @@
         {
             "titulo": "Fontanería",
             "texto": "Realizamos todo tipo de conexiones de agua, incluyendo instalación y conexión de baños, aseos, duchas, cocinas, lavaderos y más.",
-            "carpeta": "img/fontaneria/",
+            "carpeta": "img/Fontaneria/",
             "imgs": [
                 "1.1.jpg",
                 "1.2.jpg",
