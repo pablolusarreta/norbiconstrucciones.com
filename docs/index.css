@@ -114,7 +114,11 @@ body {
     height: 100%;
     overflow: hidden;
 }
-
+#cuerpo .carrusel{
+    width: 100%;
+    min-width: 1200px;
+    height: 200px;
+}
 #presentacion {
     display: flex;
     position: relative;

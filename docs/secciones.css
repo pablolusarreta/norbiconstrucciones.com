@@ -4,7 +4,7 @@
 .especialidades {
     display: flex;
     max-width: 1200px;
-    margin: 200px auto;
+    margin: 20px auto;
     gap: 50px;
     font-weight: 600;
 
