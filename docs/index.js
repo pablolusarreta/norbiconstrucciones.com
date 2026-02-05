@@ -1,20 +1,21 @@
-const cargaContenido = (url, sec) => {
+const cargaContenido = (url, n) => {
     fetch(url)
         .then(res => res.text())
         .then(html => {
             document.getElementById('cuerpo').innerHTML = html;
-            if (sec == 0) especialidades(0)
-            if (sec == 1) trabajos()
-
+            console.log(n)
+            marcamenu(n)
+            if (n === 0 || n === 3) especialidades(0, n)
         })
         .catch(err => console.log(err));
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-const especialidades = sec => {
+const especialidades = (sec, n) => {
     document.getElementsByClassName("main-content")[0].children[0].innerHTML = DATOS.secciones[sec].titulo
-    document.getElementsByClassName("main-content")[0].children[1].innerHTML = DATOS.secciones[sec].texto
+    document.getElementsByClassName("main-content")[0].children[1].innerHTML = (n === 0) ? "" : DATOS.secciones[sec].texto
     const nfotos = DATOS.secciones[sec].imgs.length
-    const cont = nfotos > 6 ? 6 : nfotos
+    let cont = nfotos > n ? n : nfotos
+    cont = (n === 0) ? nfotos : cont
     let salida = new String()
     for (let i = 0; i < cont; i++) {
         salida += `<div class="image-container">
@@ -23,27 +24,20 @@ const especialidades = sec => {
     }
     document.getElementsByClassName("image-grid")[0].innerHTML = salida
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-const trabajos = () => {
-    let salida = new String()
-    for (let i = 0; i < DATOS.secciones.length; i++) {
-        salida += `  <main class="main-content">
-                    <h1>${DATOS.secciones[i].titulo}</h1>
-                    <div class="image-grid">`
-        for (let j = 0; j < DATOS.secciones[i].imgs.length; j++) {
-            salida +=   `<div class="image-container">
-                            <img src="${DATOS.secciones[i].carpeta + DATOS.secciones[i].imgs[j]}">
-                        </div>`
-        }
-        salida += "</div></main>"
-    }
-    document.getElementsByClassName("trabajos")[0].innerHTML = salida
-}
 // INICIO/////////////////////////////////////////////////////////////////////////////////////////////////
+const marcamenu = n => {
+    const sels = [2, 3, null, 1]
+    const menu = document.getElementsByClassName('menu')[0]
+    for (let i = 1; i < menu.children.length; i++) {
+        //console.log(i)
+        if (sels[n] === i) { menu.children[i].children[0].style.borderLeftColor = 'var(--orange)' }
+        else {
+            menu.children[i].children[0].style.borderLeftColor = 'transparent'
+        }
+    }
+}
 let DATOS
-window.onload = () => {
-    document.getElementById('cuerpo').addEventListener("load", () => { alert(9) })
-    // PRESENTACION  
+document.addEventListener('DOMContentLoaded', () => {
     const imgHome = ["H4.jpg", "H2.jpg", "H3.jpg", "H1.jpg"]
     const imgPresentacion = document.getElementById("presentacion")
     const imgPres = document.getElementById("imgPres")
@@ -67,14 +61,11 @@ window.onload = () => {
     }
     //ARRANQUE
     setInterval(presentacion, 10000)
-
     // DATOS JSON
-
     fetch("data.json")
         .then(response => response.json())
         .then(data => {
             DATOS = data
             //console.log(DATOS)
         })
-
-} 
+})
