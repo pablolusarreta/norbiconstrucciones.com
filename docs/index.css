@@ -126,9 +126,7 @@ body {
     width: 100vw;
     height: 500px;
     justify-content: center;
-    /* Centra horizontalmente */
     align-items: center;
-    /* Centra verticalmente */
     overflow: hidden;
     background-color: var(--dark2);
     background-image: url('img/H1.jpg');
@@ -148,11 +146,11 @@ body {
 
 #presentacion h1 {
     position: absolute;
-    font-family: 'Playfair Display', serif;
+    margin-top: 340px;
+    margin-right: 10%;
+    font-family: 'Playfair Display', serif, normal;
     font-size: 1.5rem;
-    line-height: 1.1;
-    margin-top: 300px;
-    margin-right: 40%;
+
     color: #fff;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 20px 40px;
