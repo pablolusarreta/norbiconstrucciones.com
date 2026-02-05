@@ -14,10 +14,16 @@ const especialidades = (sec, n) => {
     document.getElementsByClassName("main-content")[0].children[0].innerHTML = DATOS.secciones[sec].titulo
     document.getElementsByClassName("main-content")[0].children[1].innerHTML = (n === 0) ? "" : DATOS.secciones[sec].texto
     const nfotos = DATOS.secciones[sec].imgs.length
+
     let cont = nfotos > n ? n : nfotos
+    let z = 0
+    if (n === 0) {
+        cont = nfotos
+        z = 2
+    } 
     cont = (n === 0) ? nfotos : cont
     let salida = new String()
-    for (let i = 0; i < cont; i++) {
+    for (let i = z; i < cont; i++) {
         salida += `<div class="image-container">
                         <img src="${DATOS.secciones[sec].carpeta}${DATOS.secciones[sec].imgs[i]}">
                     </div>`
