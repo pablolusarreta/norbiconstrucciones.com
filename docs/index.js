@@ -3,7 +3,6 @@ const cargaContenido = (url, n) => {
         .then(res => res.text())
         .then(html => {
             document.getElementById('cuerpo').innerHTML = html;
-            console.log(n)
             marcamenu(n)
             if (n === 0 || n === 3) especialidades(0, n)
         })
@@ -11,6 +10,7 @@ const cargaContenido = (url, n) => {
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 const especialidades = (sec, n) => {
+    // n viene del menu
     document.getElementsByClassName("main-content")[0].children[0].innerHTML = DATOS.secciones[sec].titulo
     document.getElementsByClassName("main-content")[0].children[1].innerHTML = (n === 0) ? "" : DATOS.secciones[sec].texto
     const nfotos = DATOS.secciones[sec].imgs.length
@@ -20,17 +20,18 @@ const especialidades = (sec, n) => {
     if (n === 0) {
         cont = nfotos
         z = 2
-    } 
+    }
     cont = (n === 0) ? nfotos : cont
     let salida = new String()
+    let img
     for (let i = z; i < cont; i++) {
+        img = DATOS.secciones[sec].carpeta + DATOS.secciones[sec].imgs[i]
         salida += `<div class="image-container">
-                        <img src="${DATOS.secciones[sec].carpeta}${DATOS.secciones[sec].imgs[i]}">
+                        <img src="${img}" onclick="amplia('${img}')">
                     </div>`
     }
     document.getElementsByClassName("image-grid")[0].innerHTML = salida
 }
-// INICIO/////////////////////////////////////////////////////////////////////////////////////////////////
 const marcamenu = n => {
     const sels = [2, 3, null, 1]
     const menu = document.getElementsByClassName('menu')[0]
@@ -42,11 +43,19 @@ const marcamenu = n => {
         }
     }
 }
+const amplia = img => {
+    ampliacion.innerHTML = `<img src="${img}">`
+    ampliacion.addEventListener('click', () => { ampliacion.style.display = 'none' })
+    ampliacion.style.display = 'flex'
+}
+// INICIO/////////////////////////////////////////////////////////////////////////////////////////////////
+    //const ampliacion = document.getElementById("ampliacion")
 let DATOS
 document.addEventListener('DOMContentLoaded', () => {
     const imgHome = ["H4.jpg", "H2.jpg", "H3.jpg", "H1.jpg"]
     const imgPresentacion = document.getElementById("presentacion")
     const imgPres = document.getElementById("imgPres")
+
     let foto = 0
     let alter = true
     imgPres.addEventListener("load", () => {
