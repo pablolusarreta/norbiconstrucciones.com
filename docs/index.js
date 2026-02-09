@@ -49,10 +49,18 @@ const amplia = img => {
     ampliacion.style.display = 'flex'
 }
 // INICIO/////////////////////////////////////////////////////////////////////////////////////////////////
-    //const ampliacion = document.getElementById("ampliacion")
+//const ampliacion = document.getElementById("ampliacion")
 let DATOS
 document.addEventListener('DOMContentLoaded', () => {
-    const imgHome = ["H4.jpg", "H2.jpg", "H3.jpg", "H1.jpg"]
+    const imgHome = [
+        "H1.webp",
+        "H2.webp",
+        "H3.webp",
+        "H4.webp",
+        "H5.webp",
+        "H6.webp",
+        "H7.webp"
+    ]
     const imgPresentacion = document.getElementById("presentacion")
     const imgPres = document.getElementById("imgPres")
 
