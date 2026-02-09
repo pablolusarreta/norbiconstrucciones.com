@@ -52,9 +52,10 @@ const amplia = img => {
     ampliacion.style.display = 'flex'
 }
 // INICIO/////////////////////////////////////////////////////////////////////////////////////////////////
-//const ampliacion = document.getElementById("ampliacion")
+
 let DATOS
 document.addEventListener('DOMContentLoaded', () => {
+    const ampliacion = document.getElementById("ampliacion")
     const imgHome = [
         "H1.webp",
         "H2.webp",
