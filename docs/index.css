@@ -14,6 +14,7 @@ body {
     font-family: normal;
     z-index: 10;
     user-select: none;
+    zoom: 1;
 }
 
 .container {

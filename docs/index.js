@@ -45,7 +45,10 @@ const marcamenu = n => {
 }
 const amplia = img => {
     ampliacion.innerHTML = `<img src="${img}">`
-    ampliacion.addEventListener('click', () => { ampliacion.style.display = 'none' })
+    ampliacion.addEventListener('click', () => { 
+        ampliacion.style.display = 'none'
+        document.body.style.zoom= "1" 
+    })
     ampliacion.style.display = 'flex'
 }
 // INICIO/////////////////////////////////////////////////////////////////////////////////////////////////
