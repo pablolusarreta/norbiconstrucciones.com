@@ -193,6 +193,7 @@ body {
 .products {
     padding: 60px 20px;
     text-align: center;
+    background-color: #f9f9f9;
 }
 
 .products h4 {
@@ -221,6 +222,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
     margin-top: 40px;
+
 }
 
 .product-item img {
