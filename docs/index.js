@@ -46,9 +46,8 @@ const marcamenu = n => {
 const amplia = img => {
     debugger
     ampliacion.innerHTML = `<img src="${img}">`
-    ampliacion.addEventListener('click', () => { 
+    ampliacion.addEventListener('click', () => {
         ampliacion.style.display = 'none'
-        document.body.style.transform = "scale(1)"
     })
     ampliacion.style.display = 'flex'
 }

@@ -286,6 +286,7 @@ footer a:visited, footer a:active {
     align-items: center;
     position: fixed;
     width: 100vw;
+    
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 100;
