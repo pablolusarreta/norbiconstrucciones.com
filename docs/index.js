@@ -44,7 +44,6 @@ const marcamenu = n => {
     }
 }
 const amplia = img => {
-    debugger
     ampliacion.innerHTML = `<img src="${img}">`
     ampliacion.addEventListener('click', () => {
         ampliacion.style.display = 'none'
