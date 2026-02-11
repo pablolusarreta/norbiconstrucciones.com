@@ -44,10 +44,11 @@ const marcamenu = n => {
     }
 }
 const amplia = img => {
+    debugger
     ampliacion.innerHTML = `<img src="${img}">`
     ampliacion.addEventListener('click', () => { 
         ampliacion.style.display = 'none'
-        document.body.style.zoom= "1" 
+        document.body.style.transform = "scale(1)"
     })
     ampliacion.style.display = 'flex'
 }
@@ -55,7 +56,7 @@ const amplia = img => {
 
 let DATOS
 document.addEventListener('DOMContentLoaded', () => {
-    const ampliacion = document.getElementById("ampliacion")
+    /*const ampliacion = document.getElementById("ampliacion")*/
     const imgHome = [
         "H1.webp",
         "H2.webp",

@@ -25,6 +25,7 @@
     .product-item {
         min-width: 300px;
     }
+
     .carrusel {
         height: 100px;
     }
@@ -50,6 +51,11 @@
         text-align: center;
         flex-direction: row;
     }
+
+    .contacto {
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 616px) {

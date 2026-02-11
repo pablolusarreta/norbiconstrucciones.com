@@ -235,12 +235,6 @@ body {
     border: 1px solid #ddd;
 }
 
-/*----------------------------------------------------------*/
-
-.separador {
-    height: 100px;
-}
-
 /*------------------          PIE            ---------------*/
 footer {
     width: 100%;
@@ -252,6 +246,7 @@ footer {
     color: var(--text-color);
     gap: 22px;
     background-color: var(--orange);
+    z-index:30;
 }
 
 footer span {
