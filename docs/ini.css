@@ -2,6 +2,10 @@
     font-family: normal;
     src: url("fuentes/EpundaSlab-VariableFont_wght.ttf");
 }
+@font-face {
+    font-family: rotulo;
+    src: url("fuentes/ShareTechMono-Regular.ttf");
+}
 
 :root {
     --orange: #d68328;

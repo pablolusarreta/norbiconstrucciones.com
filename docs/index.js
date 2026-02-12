@@ -50,9 +50,14 @@ const amplia = img => {
     })
     ampliacion.style.display = 'flex'
 }
-// INICIO/////////////////////////////////////////////////////////////////////////////////////////////////
-
+// ARRANQUE /////////////////////////////////////////////////////////////////////////////////////////////////
 let DATOS
+// DATOS JSON
+fetch("data.json")
+    .then(response => response.json())
+    .then(data => {
+        DATOS = data
+    })
 document.addEventListener('DOMContentLoaded', () => {
     /*const ampliacion = document.getElementById("ampliacion")*/
     const imgHome = [
@@ -85,13 +90,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         foto = (foto == (imgHome.length - 1)) ? 0 : foto + 1
     }
-    //ARRANQUE
     setInterval(presentacion, 10000)
-    // DATOS JSON
-    fetch("data.json")
-        .then(response => response.json())
-        .then(data => {
-            DATOS = data
-            //console.log(DATOS)
-        })
 })

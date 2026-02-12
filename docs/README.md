@@ -1,6 +1,7 @@
 ### Pagina web estática  realizada con 'html' , 'css' y 'javascript' con las siguientes caracteristicas:
 * Responsiva ( se adapta a todo tipos de dispositivos ).
 * 4 secciones com menu interactivo.
+* Fuentes personalizadas.
 * Visor de imagenes.
 * Meta datos para rastreo web.
 
