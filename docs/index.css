@@ -234,7 +234,21 @@ body {
     display: block;
     border: 1px solid #ddd;
 }
+/*--------------------------RETORNO--------------------------*/
 
+.retorno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;  
+    height: 40px;
+    background-color: transparent;
+}
+
+.retorno img {
+    max-width: 100%;
+    height: auto;
+}
 /*------------------          PIE            ---------------*/
 footer {
     width: 100%;
